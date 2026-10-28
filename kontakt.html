@@ -1,40 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boka bord – Kafé Kardemumma</title>
-</head>
-<body>
-  <header>
-    <h1>Kafé Kardemumma</h1>
-    <nav aria-label="Huvudmeny">
-      <ul>
-        <li><a href="index.html">Startsida</a></li>
-        <li><a href="index.html#meny">Meny</a></li>
-        <li><a href="kontakt.html" aria-current="page">Boka bord</a></li>
-      </ul>
-    </nav>
-  </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Boka bord – Kafé Kardemumma</title>
+    </head>
+    <body>
+        <header>
+            <h1>Kafé Kardemumma</h1>
+            <nav aria-label="Huvudmeny">
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="index.html#meny">Meny</a></li>
+                    <li>
+                        <a href="kontakt.html" aria-current="page">Boka bord</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-  <main>
-    <h2>Boka bord</h2>
-    <!-- TODO: Skriv ingressen från innehall.md -->
+        <main>
+            <h2>Boka bord</h2>
+            <!-- TODO: Skriv ingressen från innehall.md -->
 
-    <form action="#" method="post">
-      <!-- TODO 1: fält för namn, e-post, telefon, datum (label + input med for/id) -->
-      <!-- TODO 2: rullista för antal personer, textarea för önskemål -->
-      <!-- TODO 3: fieldset + legend för kostönskemål och bekräftelsesätt -->
-      <!-- TODO 4: samtyckeskryssruta (required) och skickaknapp -->
-    </form>
-  </main>
+            <form action="#" method="post">
+                <div class="falt">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+                <div class="falt">
+                    <label for="e-post">E-Post*</label>
+                    <input type="email" id="e-post" name="e-post" required />
+                </div>
+                <div class="falt">
+                    <label for="telefon">Telefonnummer*</label>
+                    <input type="tel" id="telefon" name="telefon" required />
+                </div>
+                <div class="falt">
+                    <label for="datum">Datum*</label>
+                    <input type="date" id="datum" name="datum" required />
+                </div>
+                <div>
+                    <label for="personer">Antal Personer</label>
+                    <select id="personer" name="personer">
+                        <!-- <option value="">Välj Antal</option> -->
 
-  <footer>
-    <p>&copy; 2026 Kafé Kardemumma</p>
-    <address>
-      Fiktivgatan 1, 111 11 Stockholm<br>
-      <a href="mailto:hej@kardemumma.example">hej@kardemumma.example</a>
-    </address>
-  </footer>
-</body>
+                        <optgroup label="Välj Antal">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="overigt">Övriga önskemål</label>
+                    <textarea id="overigt" name="overigt" rows="3"></textarea>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>kostönskemål</legend>
+                        <input
+                            type="checkbox"
+                            id="veg"
+                            name="kost"
+                            value="veg"
+                        />
+                        <label for="veg">vegetarisk</label>
+                        <input
+                            type="checkbox"
+                            id="vegan"
+                            name="kost"
+                            value="vegan"
+                        />
+                        <label for="vegan">vegansk</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>
+                            Jag har läst och förstot användarvilkoren*
+                        </legend>
+                        <input
+                            type="checkbox"
+                            id="ja"
+                            name="ja"
+                            value="ja"
+                            required
+                        />
+                        <label for="ja">Ja </label>
+                    </fieldset>
+                </div>
+                <button type="submit">Skicka</button>
+                <!-- TODO 1: fält för namn, e-post, telefon, datum (label + input med for/id) -->
+                <!-- TODO 2: rullista för antal personer, textarea för önskemål -->
+                <!-- TODO 3: fieldset + legend för kostönskemål och bekräftelsesätt -->
+                <!-- TODO 4: samtyckeskryssruta (required) och skickaknapp -->
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Kafé Kardemumma</p>
+            <address>
+                Fiktivgatan 1, 111 11 Stockholm<br />
+                <a href="mailto:hej@kardemumma.example"
+                    >hej@kardemumma.example</a
+                >
+            </address>
+        </footer>
+    </body>
 </html>
