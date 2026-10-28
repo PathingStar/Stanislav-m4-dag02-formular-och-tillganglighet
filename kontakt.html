@@ -30,7 +30,14 @@
                 </div>
                 <div class="falt">
                     <label for="e-post">E-Post*</label>
-                    <input type="email" id="e-post" name="e-post" required />
+                    <input
+                        type="email"
+                        id="e-post"
+                        name="e-post"
+                        aria-describedby="e-post-d"
+                        required
+                    />
+                    <p id="e-post-d">Kräver ett giltigt e-post adress</p>
                 </div>
                 <div class="falt">
                     <label for="telefon">Telefonnummer*</label>
@@ -50,6 +57,10 @@
                             <option value="2">2</option>
                         </optgroup>
                     </select>
+                </div>
+                <div>
+                    <label for="barnstola">Barnstola</label>
+                    <input id="barnstola" type="number" min="0" max="5" />
                 </div>
                 <div>
                     <label for="overigt">Övriga önskemål</label>
